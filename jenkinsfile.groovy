@@ -1,12 +1,16 @@
 node{
-    stage("build"){
-
+    stage("preperation"){
+        steps {
+            def mvnHome = tool 'm3'
+            git 'https://github.com/saurabhvagrawal/springboot.git'
+        }
     }
-    stage("test and scan"){
+    stage("buid"){
+        sh "cd springboot"
+        sh "${mvnHome}/bin/mvn clean install"
+        }
 
     }
     stage("deploy"){
 
     }
-
-}
