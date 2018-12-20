@@ -4,7 +4,7 @@ node{
             git 'https://github.com/saurabhvagrawal/springboot.git'
     }
     stage("buid"){
-        sh "${mvnHome}/bin/mvn clean install"
+        sh " /usr/share/apache-maven/bin/mvn clean install"
         }
 
     }
