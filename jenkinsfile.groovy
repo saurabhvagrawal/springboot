@@ -6,8 +6,6 @@ node{
     stage("buid"){
         sh "mvn clean install"
         }
-
     }
     stage("deploy"){
-
     }
